@@ -36,6 +36,7 @@
 .light-background {
   --background-color: #0f1628;
   --surface-color: #161d35;
+  background-color: var(--background-color) !important;
 }
 
 .dark-background {
@@ -86,16 +87,16 @@ h6 {
 
 
 .header {
-  --background-color: rgba(255, 255, 255, 0);
   color: var(--default-color);
   background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
 }
 
 .header .header-container {
-  background: rgba(255, 250, 240, 0.9);
+  background: var(--surface-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 7px 25px 7px 30px;
@@ -125,6 +126,7 @@ h6 {
 .header .btn-getstarted:focus {
   color: #ffffff;
   background: var(--accent-color);
+  border: none;
   font-size: 14px;
   padding: 8px 20px;
   margin: 0 0 0 30px;
@@ -358,13 +360,13 @@ h6 {
     padding: 10px 0;
     margin: 10px 20px;
     background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border: 1px solid var(--border-color);
     box-shadow: none;
     transition: all 0.5s ease-in-out;
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
+    background-color: var(--surface-color);
   }
 
   .navmenu .dropdown>.dropdown-active {
@@ -402,7 +404,7 @@ h6 {
 
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #060810;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -601,7 +603,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+  background-image: repeating-linear-gradient(45deg, color-mix(in srgb, var(--surface-color), transparent 98%) 0px, color-mix(in srgb, var(--surface-color), transparent 95%) 1px, transparent 1px, transparent 10px);
   z-index: 1;
 }
 
@@ -740,8 +742,8 @@ section,
   font-weight: 700;
   letter-spacing: 0;
   color: var(--accent-color);
-  border: 1px solid rgba(15, 81, 50, 0.18);
-  background: rgba(255, 250, 240, 0.62);
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
   border-radius: 6px;
   padding: 8px 12px;
   margin: 0;
@@ -799,7 +801,7 @@ section,
 .hero .description p {
   font-size: 1.12rem;
   line-height: 1.7;
-  color: #475569;
+  color: var(--default-color);
   margin: 0;
   max-width: 660px;
 }
@@ -816,8 +818,8 @@ section,
   display: inline-flex;
   align-items: center;
   background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  color: var(--contrast-color);
+  border: none;
+  color: #ffffff;
   padding: 0.95rem 1.45rem;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -825,7 +827,7 @@ section,
   letter-spacing: 0;
   transition: all 0.3s ease;
   text-transform: none;
-  box-shadow: 0 14px 30px rgba(15, 81, 50, 0.22);
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--accent-color), transparent 78%);
 }
 
 .hero .cta-button .btn span {
@@ -897,12 +899,12 @@ section,
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #334155;
+  color: var(--default-color);
   font-size: 0.92rem;
   border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 9px 12px;
-  background: rgba(255, 250, 240, 0.72);
+  background: var(--surface-color);
 }
 
 .hero .trust-row i {
@@ -913,17 +915,17 @@ section,
   width: min(100%, 430px);
   margin-left: auto;
   padding: 30px;
-  border: 2px solid #111827;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
-  background: #fffaf0;
-  box-shadow: 16px 16px 0 #111827;
+  background: var(--surface-color);
+  box-shadow: 16px 16px 0 var(--shadow-color);
   transform: rotate(1.2deg);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .hero .growth-plan-panel:hover {
   transform: rotate(0deg) translateY(-5px);
-  box-shadow: 20px 20px 0 #111827;
+  box-shadow: 20px 20px 0 var(--shadow-color);
 }
 
 .hero .growth-plan-panel .panel-label {
@@ -936,14 +938,14 @@ section,
 }
 
 .hero .growth-plan-panel h2 {
-  color: #111827;
+  color: var(--heading-color);
   font-size: clamp(1.85rem, 4vw, 2.6rem);
   line-height: 1.08;
   margin-bottom: 16px;
 }
 
 .hero .growth-plan-panel p {
-  color: #475569;
+  color: var(--default-color);
   line-height: 1.65;
   margin-bottom: 22px;
 }
@@ -958,12 +960,12 @@ section,
   grid-template-columns: 28px 1fr;
   align-items: center;
   gap: 10px;
-  color: #334155;
+  color: var(--default-color);
   font-weight: 700;
   padding: 12px;
-  border: 1px solid rgba(17, 24, 39, 0.12);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: #f6f0e4;
+  background: var(--background-color);
 }
 
 .hero .plan-checklist i {
@@ -978,14 +980,14 @@ section,
   gap: 12px;
   margin-top: 16px;
   padding: 12px;
-  border: 1px dashed #111827;
+  border: 1px dashed var(--border-color);
   border-radius: 8px;
-  color: #111827;
+  color: var(--heading-color);
   font-weight: 800;
 }
 
 .hero .channel-flow span {
-  color: #111827;
+  color: var(--heading-color);
 }
 
 .hero .channel-flow i {
@@ -1033,17 +1035,17 @@ section,
 .proof-strip .proof-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border: 2px solid #111827;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
   background: var(--background-color);
-  box-shadow: 12px 12px 0 #111827;
+  box-shadow: 12px 12px 0 var(--shadow-color);
   overflow: hidden;
 }
 
 .proof-strip .proof-grid>div {
   padding: 28px;
   min-height: 210px;
-  border-right: 2px solid #111827;
+  border-right: 2px solid var(--border-color);
   transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
@@ -1052,8 +1054,8 @@ section,
 }
 
 .proof-strip .proof-grid>div:hover {
-  background: rgba(246, 240, 228, 0.78);
-  box-shadow: inset 0 5px 0 rgba(15, 81, 50, 0.22);
+  background: var(--surface-color);
+  box-shadow: inset 0 5px 0 var(--accent-color);
   transform: translateY(-4px);
 }
 
@@ -1063,16 +1065,16 @@ section,
   justify-content: center;
   width: 38px;
   height: 38px;
-  border: 1px solid #111827;
+  border: 1px solid var(--border-color);
   border-radius: 999px;
   margin-bottom: 30px;
-  color: #111827;
+  color: var(--heading-color);
   font-weight: 800;
 }
 
 .proof-strip strong {
   display: block;
-  color: #111827;
+  color: var(--heading-color);
   font-size: 1.35rem;
   line-height: 1.2;
   margin-bottom: 14px;
@@ -1080,7 +1082,7 @@ section,
 }
 
 .proof-strip p {
-  color: #475569;
+  color: var(--default-color);
   margin: 0;
   line-height: 1.65;
 }
@@ -1098,7 +1100,7 @@ section,
   .proof-strip .proof-grid>div {
     min-height: auto;
     border-right: 0;
-    border-bottom: 2px solid #111827;
+    border-bottom: 2px solid var(--border-color);
   }
 
   .proof-strip .proof-grid>div:last-child {
@@ -1115,9 +1117,9 @@ section,
   height: 100%;
   padding: 34px;
   border-radius: 8px;
-  background: #fffaf0;
-  border: 2px solid rgba(15, 81, 50, 0.22);
-  box-shadow: 10px 10px 0 rgba(242, 193, 78, 0.55);
+  background: var(--surface-color);
+  border: 2px solid var(--border-color);
+  box-shadow: 10px 10px 0 var(--shadow-color);
 }
 
 .about .trust-panel .eyebrow {
@@ -1139,7 +1141,7 @@ section,
 }
 
 .about .trust-panel p {
-  color: #475569;
+  color: var(--default-color);
   line-height: 1.7;
 }
 
@@ -1156,8 +1158,8 @@ section,
   gap: 14px;
   padding: 14px;
   border-radius: 8px;
-  background: rgba(246, 240, 228, 0.7);
-  border: 1px solid rgba(15, 81, 50, 0.14);
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
 }
 
 .about .trust-metrics strong {
@@ -1166,7 +1168,7 @@ section,
 }
 
 .about .trust-metrics span {
-  color: #475569;
+  color: var(--default-color);
 }
 
 .about .about-image {
@@ -1271,11 +1273,11 @@ section,
 
 .about .about-content .btn-primary {
   background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
   font-weight: 700;
-  color: var(--contrast-color);
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 
@@ -1287,7 +1289,7 @@ section,
 }
 
 .about .testimonial-section {
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid var(--border-color);
 }
 
 .about .testimonial-section .testimonial-intro h3 {
@@ -1310,7 +1312,7 @@ section,
   height: 44px;
   border-radius: 50%;
   background-color: var(--surface-color);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1338,6 +1340,7 @@ section,
 
 .about .testimonial-section .testimonial-item {
   background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
@@ -1419,7 +1422,8 @@ section,
   align-items: center;
   padding: 12px 30px;
   background-color: var(--accent-color);
-  color: var(--contrast-color);
+  color: #ffffff;
+  border: none;
   border-radius: 6px;
   font-weight: 700;
   transition: all 0.3s ease;
@@ -1451,7 +1455,7 @@ section,
   margin-bottom: 30px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.035);
+  background: var(--surface-color);
   transition: all 0.3s ease;
 }
 
@@ -1756,7 +1760,7 @@ section,
 .approach-section {
   padding-top: 80px;
   position: relative;
-  background: linear-gradient(135deg, rgba(202, 138, 4, 0.12), rgba(255, 255, 255, 0.035));
+  background: var(--background-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   border-radius: 0;
@@ -1820,10 +1824,10 @@ section,
   max-width: 680px;
   margin-bottom: 1.5rem;
   padding: 14px 16px;
-  border: 1px solid rgba(15, 81, 50, 0.18);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: rgba(255, 250, 240, 0.7);
-  color: #475569;
+  background: var(--surface-color);
+  color: var(--default-color);
 }
 
 .approach-section .proof-note i {
@@ -1833,7 +1837,7 @@ section,
   width: 38px;
   height: 38px;
   border-radius: 8px;
-  background: rgba(15, 81, 50, 0.08);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--accent-color);
   font-size: 1.1rem;
 }
@@ -1851,8 +1855,8 @@ section,
 
 .approach-section .cta-buttons .btn.btn-primary {
   background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
+  border: none;
+  color: #ffffff;
 }
 
 .approach-section .cta-buttons .btn.btn-primary:hover {
@@ -1863,8 +1867,9 @@ section,
 }
 
 .approach-section .cta-buttons .btn.btn-outline {
-  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 50%);
+  border: 2px solid var(--accent-color);
   color: var(--accent-color);
+  background: transparent;
 }
 
 .approach-section .cta-buttons .btn.btn-outline:hover {
@@ -1881,10 +1886,10 @@ section,
 }
 
 .approach-section .why-detail-panel {
-  background: #fffaf0;
-  border: 2px solid rgba(17, 24, 39, 0.9);
+  background: var(--surface-color);
+  border: 2px solid var(--border-color);
   border-radius: 8px;
-  box-shadow: 12px 12px 0 rgba(15, 81, 50, 0.92);
+  box-shadow: 12px 12px 0 var(--shadow-color);
   padding: 30px;
   color: var(--heading-color);
 }
@@ -1916,7 +1921,7 @@ section,
   gap: 14px;
   align-items: start;
   padding-top: 18px;
-  border-top: 1px solid rgba(17, 24, 39, 0.12);
+  border-top: 1px solid var(--border-color);
 }
 
 .approach-section .detail-list i {
@@ -1926,7 +1931,7 @@ section,
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: rgba(242, 193, 78, 0.45);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--accent-color);
   font-size: 1.2rem;
 }
@@ -1940,7 +1945,7 @@ section,
 
 .approach-section .detail-list p {
   margin: 0;
-  color: #475569;
+  color: var(--default-color);
   font-size: 0.94rem;
   line-height: 1.55;
   opacity: 1;
@@ -1961,7 +1966,7 @@ section,
   }
 
   .approach-section .why-detail-panel {
-    box-shadow: 8px 8px 0 rgba(15, 81, 50, 0.92);
+    box-shadow: 8px 8px 0 var(--shadow-color);
   }
 }
 
@@ -1990,6 +1995,7 @@ section,
 
 .testimonials .testimonial-item {
   background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
   padding: 40px;
   border-radius: 20px;
 }
@@ -2150,6 +2156,7 @@ section,
   border-radius: 16px;
   overflow: hidden;
   background: var(--surface-color);
+  border: 1px solid var(--border-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -2213,6 +2220,7 @@ section,
   align-items: center;
   justify-content: center;
   background: var(--surface-color);
+  border: 1px solid var(--border-color);
   color: var(--accent-color);
   border-radius: 12px;
   font-size: 20px;
@@ -2338,7 +2346,7 @@ section,
 .team .team-member {
   position: relative;
   background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   transition: 0.3s;
 }
@@ -2401,7 +2409,7 @@ section,
   color: var(--heading-color);
   transition: 0.3s;
   border-radius: 4px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid var(--border-color);
 }
 
 .team .team-member .member-info .social a:hover {
@@ -2445,6 +2453,7 @@ section,
 .pricing .pricing-card {
   height: 100%;
   background: var(--surface-color);
+  border: 1px solid var(--border-color);
   border-radius: var(--card-border-radius);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -2453,7 +2462,7 @@ section,
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid var(--border-color);
 }
 
 .pricing .pricing-card:hover {
@@ -2467,7 +2476,8 @@ section,
 
 .pricing .pricing-card.popular .plan-cta .btn-plan {
   background-color: var(--accent-color);
-  color: var(--contrast-color);
+  color: #ffffff;
+  border: none;
 }
 
 .pricing .pricing-card.popular .plan-cta .btn-plan:hover {
@@ -2594,6 +2604,7 @@ section,
   border-radius: 50px;
   font-size: 16px;
   font-weight: 600;
+  border: 1px solid var(--border-color);
   transition: all 0.3s;
 }
 
@@ -2646,6 +2657,7 @@ section,
 
 .faq .faq-container .faq-item {
   background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
@@ -2723,6 +2735,7 @@ section,
 
 .contact .contact-info-box {
   background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
   padding: 25px;
@@ -2740,6 +2753,7 @@ section,
 
 .contact .contact-info-box .icon-box {
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid var(--border-color);
   color: var(--accent-color);
   width: 50px;
   height: 50px;
@@ -2794,6 +2808,7 @@ section,
 
 .contact .contact-form-wrapper {
   background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
   padding: 40px;
@@ -2872,7 +2887,7 @@ section,
 .contact .contact-form-wrapper .btn-submit {
   background-color: var(--accent-color);
   border: none;
-  color: var(--contrast-color);
+  color: #ffffff;
   padding: 12px 30px;
   font-size: 16px;
   font-weight: 600;
@@ -2889,7 +2904,7 @@ section,
 .contact .contact-direct-intro {
   max-width: 600px;
   margin: 0 auto 24px;
-  color: #64748b;
+  color: var(--default-color);
   line-height: 1.7;
 }
 
@@ -2912,7 +2927,7 @@ section,
   background-color: var(--bright-accent);
   color: var(--heading-color);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(242, 193, 78, 0.36);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--bright-accent), transparent 64%);
 }
 
 .contact .contact-form-wrapper .btn-submit:active {
@@ -2922,7 +2937,7 @@ section,
 
 .contact .contact-direct-actions .btn-outline-primary {
   background-color: transparent;
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 45%);
+  border: 1px solid var(--accent-color);
   color: var(--accent-color);
   box-shadow: none;
 }
@@ -2937,7 +2952,7 @@ section,
 .contact .contact-form-wrapper .form-note {
   margin: 12px auto 0;
   max-width: 460px;
-  color: #64748b;
+  color: var(--default-color);
   font-size: 0.9rem;
   line-height: 1.5;
 }

@@ -52,10 +52,10 @@
   </header>
 
   <main class="main">
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero section logic-hero">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 content-col hero-reveal">
+          <div class="col-lg-7 content-col hero-reveal reveal-on-scroll">
             <div class="content">
 
               <div class="agency-name">
@@ -92,7 +92,39 @@
 
           <div class="col-lg-5">
             <div class="visual-content">
-              <div class="growth-plan-panel" aria-label="Boolean Logic campaign planning approach">
+              <div class="decision-tree-visual" aria-hidden="true">
+                <svg viewBox="0 0 520 420" role="img">
+                  <defs>
+                    <linearGradient id="logicLine" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="var(--accent-color)"/>
+                      <stop offset="1" stop-color="var(--bright-accent)"/>
+                    </linearGradient>
+                    <filter id="softGlow">
+                      <feGaussianBlur stdDeviation="8" result="blur"/>
+                      <feMerge>
+                        <feMergeNode in="blur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <path class="logic-path path-a" d="M260 52 L170 142 L112 232 L72 330"/>
+                  <path class="logic-path path-b" d="M260 52 L260 150 L260 252 L260 354"/>
+                  <path class="logic-path path-c" d="M260 52 L350 142 L410 232 L452 330"/>
+                  <path class="logic-path path-d" d="M170 142 H350"/>
+                  <path class="logic-path path-e" d="M112 232 H410"/>
+                  <circle class="logic-node node-core" cx="260" cy="52" r="18"/>
+                  <circle class="logic-node" cx="170" cy="142" r="13"/>
+                  <circle class="logic-node" cx="350" cy="142" r="13"/>
+                  <circle class="logic-node" cx="112" cy="232" r="11"/>
+                  <circle class="logic-node" cx="260" cy="252" r="15"/>
+                  <circle class="logic-node" cx="410" cy="232" r="11"/>
+                  <circle class="logic-node node-small" cx="72" cy="330" r="9"/>
+                  <circle class="logic-node node-small" cx="260" cy="354" r="9"/>
+                  <circle class="logic-node node-small" cx="452" cy="330" r="9"/>
+                </svg>
+              </div>
+
+              <div class="growth-plan-panel reveal-on-scroll" aria-label="Boolean Logic campaign planning approach">
                 <span class="panel-label">Growth System</span>
                 <h2>Campaign work that is planned before money is spent.</h2>
                 <p>Before launch, we agree the audience, offer, landing page, tracking, and reporting view so every channel has a clear job.</p>
@@ -118,6 +150,22 @@
                   <span>CRO</span>
                 </div>
               </div>
+
+              <div class="floating-analytics-card reveal-on-scroll" aria-label="Illustrative campaign signal card">
+                <span class="mini-label">Decision Signal</span>
+                <div class="signal-row">
+                  <span>Lead quality</span>
+                  <i></i>
+                </div>
+                <div class="signal-row">
+                  <span>Search intent</span>
+                  <i></i>
+                </div>
+                <div class="signal-row">
+                  <span>Landing clarity</span>
+                  <i></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -127,17 +175,17 @@
 <section class="proof-strip section" aria-label="Boolean Logic performance principles">
       <div class="container">
         <div class="proof-grid">
-          <div>
+          <div class="reveal-on-scroll">
             <span class="proof-kicker">01</span>
             <strong>Revenue-first reporting</strong>
             <p>Campaign conversations stay tied to leads, revenue, and conversion quality.</p>
           </div>
-          <div>
+          <div class="reveal-on-scroll">
             <span class="proof-kicker">02</span>
             <strong>Lean launch cycles</strong>
             <p>Test fast, learn cleanly, and optimize before wasted spend becomes habit.</p>
           </div>
-          <div>
+          <div class="reveal-on-scroll">
             <span class="proof-kicker">03</span>
             <strong>Full-funnel clarity</strong>
             <p>Ads, search, website behavior, and analytics are treated as one growth system.</p>
@@ -177,9 +225,10 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center service-grid">
           <div class="col-lg-4 col-md-6">
-            <div class="service-card position-relative z-1">
+            <div class="service-card position-relative z-1 reveal-on-scroll">
+              <span class="service-node" aria-hidden="true"></span>
               <div class="service-icon">
                 <i class="bi bi-palette"></i>
               </div>
@@ -197,7 +246,8 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="service-card position-relative z-1">
+            <div class="service-card position-relative z-1 reveal-on-scroll">
+              <span class="service-node" aria-hidden="true"></span>
               <div class="service-icon">
                 <i class="bi bi-gem"></i>
               </div>
@@ -215,7 +265,8 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="service-card position-relative z-1">
+            <div class="service-card position-relative z-1 reveal-on-scroll">
+              <span class="service-node" aria-hidden="true"></span>
               <div class="service-icon">
                 <i class="bi bi-megaphone"></i>
               </div>
@@ -233,7 +284,8 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="service-card position-relative z-1">
+            <div class="service-card position-relative z-1 reveal-on-scroll">
+              <span class="service-node" aria-hidden="true"></span>
               <div class="service-icon">
                 <i class="bi bi-code-slash"></i>
               </div>
@@ -251,7 +303,8 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="service-card position-relative z-1">
+            <div class="service-card position-relative z-1 reveal-on-scroll">
+              <span class="service-node" aria-hidden="true"></span>
               <div class="service-icon">
                 <i class="bi bi-graph-up"></i>
               </div>
@@ -269,7 +322,8 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="service-card position-relative z-1">
+            <div class="service-card position-relative z-1 reveal-on-scroll">
+              <span class="service-node" aria-hidden="true"></span>
               <div class="service-icon">
                 <i class="bi bi-camera-video"></i>
               </div>
@@ -299,9 +353,9 @@
       </div>
 <div class="container">
 
-        <div class="steps-wrapper">
+        <div class="steps-wrapper decision-flow reveal-on-scroll">
 
-          <div class="step-item">
+          <div class="step-item flow-node">
             <div class="step-content">
               <div class="step-icon">
                 <i class="bi bi-search"></i>
@@ -313,7 +367,7 @@
               </div>
             </div>
           </div>
-<div class="step-item">
+<div class="step-item flow-node">
             <div class="step-content">
               <div class="step-icon">
                 <i class="bi bi-sliders"></i>
@@ -325,7 +379,12 @@
               </div>
             </div>
           </div>
-<div class="step-item">
+          <div class="flow-decision" aria-hidden="true">
+            <span>YES</span>
+            <i></i>
+            <span>NO</span>
+          </div>
+<div class="step-item flow-node">
             <div class="step-content">
               <div class="step-icon">
                 <i class="bi bi-bar-chart"></i>
@@ -337,7 +396,7 @@
               </div>
             </div>
           </div>
-<div class="step-item">
+<div class="step-item flow-node">
             <div class="step-content">
               <div class="step-icon">
                 <i class="bi bi-repeat"></i>
@@ -353,6 +412,56 @@
 
       </div>
 
+    </section>
+
+<section class="insight-dashboard section" aria-label="Illustrative Boolean Logic analytics dashboard">
+      <div class="container">
+        <div class="dashboard-shell reveal-on-scroll">
+          <div class="dashboard-copy">
+            <span class="dashboard-eyebrow">Insight layer</span>
+            <h2>Marketing signals, connected in one decision view.</h2>
+            <p>Campaign performance becomes easier to manage when lead quality, conversion paths, and channel activity are viewed together.</p>
+          </div>
+          <div class="dashboard-panel" aria-hidden="true">
+            <div class="dashboard-toolbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="dashboard-grid">
+              <div class="metric-tile">
+                <small>Lead growth</small>
+                <div class="metric-line line-wide"></div>
+                <div class="metric-bars"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="metric-tile">
+                <small>Conversion improvement</small>
+                <div class="metric-line"></div>
+                <div class="trend-line"></div>
+              </div>
+              <div class="metric-tile wide">
+                <small>Campaign performance</small>
+                <div class="flow-mini">
+                  <span>Search</span>
+                  <i></i>
+                  <span>Landing</span>
+                  <i></i>
+                  <span>Enquiry</span>
+                </div>
+              </div>
+              <div class="metric-tile wide">
+                <small>ROI trend</small>
+                <svg viewBox="0 0 300 88" role="img">
+                  <path d="M8 72 C 55 64, 64 42, 104 48 S 174 74, 214 36 S 260 18, 292 24"/>
+                  <circle cx="104" cy="48" r="5"/>
+                  <circle cx="214" cy="36" r="5"/>
+                  <circle cx="292" cy="24" r="5"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
 <section id="approach" class="approach-section section">
